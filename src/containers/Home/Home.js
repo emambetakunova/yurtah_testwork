@@ -3,9 +3,10 @@ import {connect} from "react-redux";
 import Header from "../../components/Header/Header";
 import Promo from "../../components/Promo/Promo";
 import CardOfCamp from "../../components/CardOfCamp/CardOfCamp";
+import ListingsForm from "../../components/ListingsForm/ListingsForm";
+import Container from "../../components/Container/Container";
 
 import './Home.css'
-import ListingsForm from "../../components/ListingsForm/ListingsForm";
 
 class Home extends Component {
   render() {
@@ -15,7 +16,7 @@ class Home extends Component {
         <Promo>
           <ListingsForm/>
         </Promo>
-        <div className="Container">
+        <Container>
           <div className="CardOfCamp">
             {this.props.listings.map((camp) => (
               <CardOfCamp
@@ -26,7 +27,7 @@ class Home extends Component {
               />
             ))}
           </div>
-        </div>
+        </Container>
       </div>
     );
   }

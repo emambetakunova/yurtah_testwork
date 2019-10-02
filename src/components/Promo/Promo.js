@@ -1,13 +1,15 @@
 import React from 'react';
+import Container from "../Container/Container";
 
 import './Promo.css';
 
 const Promo = ({children}) => {
   return (
     <div className="Promo">
-      <div className="Container"/>
-      <p className="PromoText">Best ever camp for your child</p>
-      {children}
+      <Container>
+        <p className="PromoText">Best ever camp for your child</p>
+        {children}
+      </Container>
     </div>
   )
 };
